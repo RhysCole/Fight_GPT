@@ -61,10 +61,12 @@ export interface PreFightFeatures {
   prime_score_diff: number | null;
   red_fighter_elo: number | null;
   blue_fighter_elo: number | null;
-  dominance_average: number | null;
+  rivalry_dominance: number | null;
   red_fighter_quality_score: number | null;
   blue_fighter_quality_score: number | null;
   style_diff: number | null;
+  red_style_score: number | null;
+  blue_style_score: number | null;
   red_finish_score: number | null;
   blue_finish_score: number | null;
 }

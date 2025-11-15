@@ -25,6 +25,63 @@ export const getAdminMenuItems = (state: MenuState): ISidebarMenuItem[] => [
       },
     ],
   },
+  {
+    id: "pastFights",
+    icon: "lucide--alarm-clock-check",
+    label: "Past Fights",
+    children: [
+      {
+        id: "pastFightsDashboard",
+        label: "DashBoard",
+        url: "/past/dashboards",
+      },
+      {
+        id: "postFight",
+        label: "Post Fight Overview",
+        url: `/past/postFight`,
+      }
+    ]
+  },
+  {
+    id: "fighters",
+    icon: "lucide--zap",
+    label: "Fighters",
+    children: [
+      {
+        id: "fightersDashboard",
+        label: "DashBoard",
+        url: "/fighters/dashboards",
+      },
+      {
+        id: "fighters",
+        label: "Fighters",
+        url: "/fighters/fighters",
+      },
+    ],
+  },
+  {
+    id: "community",
+    icon: "lucide--person-standing",
+    label: "Community",
+    children: [
+      {
+        id: "myCommunities",
+        label: "My Communities",
+        url: "/community/myCommunities",
+      },
+      {
+        id: "ActiveCommunities",
+        label: "Active Communities",
+        url: "/community/activeCommunities",
+      },
+      {
+        id: "leaderboard",
+        label: "Leaderboard",
+        url: "/community/leaderboard",
+      }
+    ]
+  }
+
 ];
 
 const findItem = (

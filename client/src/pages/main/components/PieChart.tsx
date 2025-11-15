@@ -1,7 +1,6 @@
 import { type ApexOptions } from "apexcharts";
 import ApexCharts from "react-apexcharts";
 
-// 1. Define an interface for the component's props
 interface PatternDonutChartProps {
     series: number[];
     labels: string[];
@@ -11,13 +10,13 @@ interface PatternDonutChartProps {
     height?: number; 
 }
 
-export const DomincancePie = ({
+export const PieChart = ({
     series,
     labels,
     colors,
     title,
-    dataUnit = "Units", 
-    height = 380, 
+    dataUnit = "", 
+    height = 480, 
 }: PatternDonutChartProps) => {
 
     const chartOptions: ApexOptions = {
@@ -40,7 +39,7 @@ export const DomincancePie = ({
         title: {
             text: title, 
             style: { fontWeight: "500" },
-            align: "right",
+            align: "center",
             offsetX: -24,
         },
         legend: {
@@ -70,13 +69,13 @@ export const DomincancePie = ({
                         show: true,
                         value: {
                             color: "var(--color-base-content)",
-                            formatter: (value) => `${value} ${dataUnit}`, 
+                            formatter: (value) =>`${dataUnit}`, 
                         },
                         total: {
                             show: true,
                             color: "#FF4560",
                             formatter: () =>
-                                series.reduce((acc, cur) => acc + cur, 0) + ` ${dataUnit}`,
+                                ` ${dataUnit}`,
                         },
                     },
                 },
