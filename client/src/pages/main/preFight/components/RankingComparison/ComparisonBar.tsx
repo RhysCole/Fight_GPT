@@ -1,6 +1,6 @@
 import type { RootState } from "@/contexts/store";
 import  { useSelector } from "react-redux";
-import { useFighterRank } from "@/hooks/useFighterRank"; 
+import { useFighterRank } from "@/hooks/searchHooks/useFighterRank"; 
 
 const colourClasses = [
   'bg-gradient-to-r from-rose-500 via-fuchsia-600 to-orange-600',

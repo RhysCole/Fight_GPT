@@ -21,7 +21,7 @@ export function InfoCards(){
             <InfoCard 
                 title='FightGPT Win Prediction'
                 text={prediction > 0.5 ? "Red Fighter Winner" : "Blue Fighter Winner"}
-                record={prediction > 0.5 ? "Blue failed the super concious mind" : "Red failed the super concious mind"}
+                record={prediction > 0.5 ? "Blue failed the super concious mind, Who has an accurcy of 80.3% just to stay humble" : "Red failed the super concious mind, Who has an accurcy of 80.3% just to stay humble"}
                 icon={'lucide--audio-lines'}
                 colourIndex={prediction > 0.5 ? 0 : 1}
             />

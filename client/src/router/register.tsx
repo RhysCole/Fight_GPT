@@ -13,7 +13,7 @@ function cw(Component: LazyExoticComponent<() => JSX.Element>){
 const defaultRoutes: IRoutes[] = [
     {
         path: "/",
-        element: cw(lazy(() => import("@/pages/main/Home/index"))),
+        element: cw(lazy(() => import("@/pages/main/upcomingFights/index"))),
     },
 ]
 
