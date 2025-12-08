@@ -102,3 +102,19 @@ export type PastFight = {
     red_fighter_elo_after: number;
     blue_fighter_elo_after: number;
 };
+
+export interface Community {
+    id: number;
+    name: string;
+    created_by_user_id: number;
+    fight_id: number;
+    members: CommunityMember[];
+    event_date: string;
+}
+
+export interface CommunityMember{
+    name: string;
+    role: string;
+    bet: number;
+    user_id: number;
+}

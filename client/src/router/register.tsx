@@ -1,9 +1,9 @@
 import { type JSX, type LazyExoticComponent, lazy } from "react";
-import { type RouteProps } from "react-router";  
+import { type RouteProps } from "react-router"; 
 
 export type IRoutes = {
     path: RouteProps["path"],
-    element: RouteProps["element"]
+    element: RouteProps["element"],
 }
 
 function cw(Component: LazyExoticComponent<() => JSX.Element>){
@@ -28,6 +28,24 @@ const fightRoutes: IRoutes[] = [
     },
 ]
 
+const communityRoutes: IRoutes[] = [
+    {
+        path: "/community/dashboard",
+        element: cw(lazy(() => import("@/pages/main/communities/index"))),
+    },
+    {
+        path: "/community/self",
+        element: cw(lazy(() => import("@/pages/main/communities/index"))),
+    }
+]
+
+const fighterRoutes: IRoutes[] = [
+    {
+        path: "/fighters/dashboards",
+        element: cw(lazy(() => import("@/pages/main/Fighters/index"))),
+    },
+]
+
 const unauthenticatedRoutes: IRoutes[] = [
     {
         path: "/auth/login",
@@ -40,6 +58,6 @@ const unauthenticatedRoutes: IRoutes[] = [
 ]
 
 export const registerRoutes = {
-    main: [...defaultRoutes,...fightRoutes],
+    main: [...defaultRoutes,...fightRoutes,...communityRoutes, ...fighterRoutes],
     auth: [...unauthenticatedRoutes]
 }

@@ -1,7 +1,7 @@
 import { useRef } from "react"
 import { useSelector } from "react-redux"
 import type { RootState } from "@/contexts/store"
-import { useCreateCommunity } from "@/hooks/searchHooks/useCommunity"
+import { useCreateCommunity } from "@/hooks/useCommunity"
 
 export function CreateCommunity({close}: {close: () => void}) {
     const fight_id = useSelector((state: RootState) => state.fights.fightId)

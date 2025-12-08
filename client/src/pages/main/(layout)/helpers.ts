@@ -52,11 +52,6 @@ export const getAdminMenuItems = (state: MenuState): ISidebarMenuItem[] => [
         label: "DashBoard",
         url: "/fighters/dashboards",
       },
-      {
-        id: "fighters",
-        label: "Fighters",
-        url: "/fighters/fighters",
-      },
     ],
   },
   {
@@ -65,19 +60,9 @@ export const getAdminMenuItems = (state: MenuState): ISidebarMenuItem[] => [
     label: "Community",
     children: [
       {
-        id: "myCommunities",
-        label: "My Communities",
-        url: "/community/myCommunities",
-      },
-      {
         id: "ActiveCommunities",
         label: "Active Communities",
-        url: "/community/activeCommunities",
-      },
-      {
-        id: "leaderboard",
-        label: "Leaderboard",
-        url: "/community/leaderboard",
+        url: "/community/dashboard",
       }
     ]
   }

@@ -1,5 +1,5 @@
 import { UpcomingTable } from "./Components/upcomingTable/UpcomingTable"
-import { HeadToHead } from "./Components/fightOverview/HeadToHead"
+import { HeadToHead } from "../components/HeadToHead"
 
 import { useSelector } from "react-redux"
 import { type RootState } from "@/contexts/store"

@@ -36,7 +36,7 @@ export function PreFightButtons() {
 
             <div className="w-1/2">
                 <button
-                    className="btn text-primary-content from-primary to-secondary relative z-1 gap-2 border-none bg-gradient-to-r py-7 w-65 ml-4"
+                    className="btn text-primary-content from-primary to-secondary relative z-1 gap-2 border-none bg-gradient-to-r py-7 w-65 ml-4 items-center justify-center"
                     onClick={() => createModalRef.current?.showModal()}
                 >
                     <span className="iconify lucide--cuboid size-4.5"></span>

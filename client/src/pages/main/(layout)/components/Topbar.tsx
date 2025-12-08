@@ -1,5 +1,4 @@
 import { ThemeToggleDropdown } from "@/components/ThemeToggleDropdown";
-import { TopbarNotificationButton } from "./TopbarNotificationButton";
 
 export const Topbar = () => {
     return (
@@ -25,7 +24,6 @@ export const Topbar = () => {
                     iconClass="size-4.5"
                 />
 
-                <TopbarNotificationButton />
             </div>
         </div>
     );
