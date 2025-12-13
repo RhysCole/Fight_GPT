@@ -1,38 +1,15 @@
 import { EloOverTimeChart } from "./EloOverTimeChart"
 import { useSelector } from "react-redux"
 import { type RootState } from "@/contexts/store"
-import { useState } from "react"
 
 export function EloModal() {
     const { red_fighter, blue_fighter } = useSelector((state: RootState) => state.fights.preFightData)
 
-    const [selected, setSelected] = useState('overTime')
 
     return (
         <div className="card bg-base-100 shadow">
             <div className="flex items-center justify-between mt-4 ml-4">
                 <span className="text-3xl">Elo Graphs</span>
-
-                <div className="tabs tabs-box tabs-xs hidden sm:flex mr-4">
-                    <div
-                        className={`tab px-3 ${selected === "overTime" ? "tab-active" : ""}`}
-                        onClick={() => setSelected("overTime")}
-                    >
-                        Elo Over Time
-                    </div>
-                    <div
-                        className={`tab px-3 ${selected === "change" ? "tab-active" : ""}`}
-                        onClick={() => setSelected("change")}
-                    >
-                        Elo Change
-                    </div>
-                    <div
-                        className={`tab px-3 ${selected === "projection" ? "tab-active" : ""}`}
-                        onClick={() => setSelected("projection")}
-                    >
-                        Projection
-                    </div>
-                </div>
             </div>
             <div className="card-body px-0 pb-0">
                 <div className="px-6">
@@ -47,8 +24,8 @@ export function EloModal() {
                             <span className="text-base-content/60 text-sm">red current elo</span>
                         </div>
 
-                        <div className="text-right"> {/* 'text-right' makes the text inside align right */}
-                            <div className="flex items-center gap-3 justify-end"> {/* 'justify-end' is optional, good practice */}
+                        <div className="text-right"> 
+                            <div className="flex items-center gap-3 justify-end">
                                 <button className="text-4xl 
                                     grow font-medium 
                                     bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 

@@ -44,6 +44,10 @@ const fighterRoutes: IRoutes[] = [
         path: "/fighters/dashboards",
         element: cw(lazy(() => import("@/pages/main/Fighters/index"))),
     },
+    {
+        path: "/fighters/overview",
+        element: cw(lazy(() => import("@/pages/main/singleFighter/index"))),
+    }
 ]
 
 const unauthenticatedRoutes: IRoutes[] = [

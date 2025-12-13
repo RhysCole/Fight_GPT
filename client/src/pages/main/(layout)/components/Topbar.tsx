@@ -1,6 +1,7 @@
 import { ThemeToggleDropdown } from "@/components/ThemeToggleDropdown";
+import { TopbarSearchButton } from "@/components/TopbarSearchButton";
 
-export const Topbar = () => {
+export function Topbar() {
     return (
         <div
             role="navigation"
@@ -8,15 +9,20 @@ export const Topbar = () => {
             className="flex items-center justify-between px-3"
             id="layout-topbar"
         >
-            <label
-                className="btn btn-square btn-ghost btn-sm"
-                aria-label="Leftmenu toggle"
-                htmlFor="layout-sidebar-toggle-trigger"
-            >
-                <span className="iconify lucide--menu size-5" />
-            </label>
+            <div className="inline-flex items-center gap-1">
+                {/* 1. Menu Toggle Button */}
+                <label
+                    className="btn btn-square btn-ghost btn-sm"
+                    aria-label="Leftmenu toggle"
+                    htmlFor="layout-sidebar-toggle-trigger"
+                >
+                    <span className="iconify lucide--menu size-5" />
+                </label>
 
-            <div className="inline-flex items-center gap-1.5">
+                <TopbarSearchButton />
+            </div>
+
+            <div className="inline-flex items-center gap-1.5 mr-6">
                 <ThemeToggleDropdown
                     triggerClass="btn btn-sm btn-circle btn-ghost iconify lucide--settings-2 size-4.5"
                     dropdownClass="dropdown-center"

@@ -18,3 +18,21 @@ export function filteredFights(fights: UpcomingFight[], query: string){
         return fights;
     }
 }   
+
+export function filteredFighters(fighters: FighterInfo[], query: string): FighterInfo[] {
+    const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
+
+    if (searchTerms.length === 0) {
+        return fighters.slice(0, 8);
+    }
+
+    try {
+        return fighters.filter(fighter => {
+            const fighterName = fighter.Name.toLowerCase();
+            return searchTerms.every(term => fighterName.includes(term));
+        }).slice(0, 8);
+    } catch (error) {
+        console.error("Error during fighter filtering:", error);
+        return fighters.slice(0, 8);
+    }
+}

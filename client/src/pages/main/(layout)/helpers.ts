@@ -26,23 +26,6 @@ export const getAdminMenuItems = (state: MenuState): ISidebarMenuItem[] => [
     ],
   },
   {
-    id: "pastFights",
-    icon: "lucide--alarm-clock-check",
-    label: "Past Fights",
-    children: [
-      {
-        id: "pastFightsDashboard",
-        label: "DashBoard",
-        url: "/past/dashboards",
-      },
-      {
-        id: "postFight",
-        label: "Post Fight Overview",
-        url: `/past/postFight`,
-      }
-    ]
-  },
-  {
     id: "fighters",
     icon: "lucide--zap",
     label: "Fighters",
@@ -51,6 +34,11 @@ export const getAdminMenuItems = (state: MenuState): ISidebarMenuItem[] => [
         id: "fightersDashboard",
         label: "DashBoard",
         url: "/fighters/dashboards",
+      },
+      {
+        id:"fightersOverview",
+        label: "Fighter Overview",
+        url: "/fighters/overview",
       },
     ],
   },

@@ -118,3 +118,30 @@ export interface CommunityMember{
     bet: number;
     user_id: number;
 }
+
+export interface FighterStats {
+  stats: {
+    id: number;
+    name: string;
+    nickname: string;
+    height: string;
+    weight: string;
+    reach: string;
+    stance: string;
+    record: string; 
+    dob: string;   
+    profile_url: string;
+    elo_rating: number;
+    rating_deviation: number;
+    rating_volatility: number;
+    quality_score: number;
+  };
+  upcoming: UpcomingFight[]; 
+}
+
+
+export interface FighterInfo {
+  id: number;
+  Name: string;
+  Record: string; 
+}

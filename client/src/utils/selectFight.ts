@@ -6,9 +6,7 @@ import { setFightData, setFightId, setLoading, setError, setFighterImageURLS, se
 import { fetchImageURL } from "./fighterImageAPI";
 
 async function fetchFightData(fightId: number, completed: boolean) {
-  const response = await axios.get(
-    `http://127.0.0.1:8000/fights/id?fight_id=${fightId}&completed=${completed}`
-  );
+  const response = await axios.get(`http://127.0.0.1:8000/fights/id?fight_id=${fightId}&completed=${completed}`);
   return response.data;
 }
 
@@ -60,5 +58,9 @@ export async function getFightData(red_fighter_id: number, blue_fighter_id: numb
     } finally {
         store.dispatch(setLoading(false));
     }
+}
+
+export async function getAllFights(){
+    
 }
 

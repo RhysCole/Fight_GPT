@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import userSlice from "@/contexts/slices/userSlice";
 import fightSlice from "@/contexts/slices/fightSlice"; 
 import communitySlice from "@/contexts/slices/communitySlice";
+import fighterSlice from "@/contexts/slices/fightersSlice";
 
 
 const store = configureStore({
@@ -9,6 +10,7 @@ const store = configureStore({
         user: userSlice,
         fights: fightSlice,
         community: communitySlice,
+        fighters: fighterSlice,
     }
 })
 
